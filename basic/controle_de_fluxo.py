@@ -411,7 +411,7 @@ print(A)
 print('-' * 15 + 'def' + '-' * 15)
 def f():
     pass
-print(f)
+print(f())
 
 
 
@@ -531,7 +531,13 @@ print('a' in 'banana')
 
 ########## - is - Verifica se dois objetos são o mesmo objeto ##########
 print('-' * 15 + 'is' + '-' * 15)
-print(1 is 1)
+
+a = [1, 2, 3]
+b = a  # b references the same object as a
+c = [1, 2, 3]  # c is a new object with the same content as a
+
+print(a is b)  # True, because a and b reference the same object
+print(a is c)  # False, because a and c are different objects in memory
 
 
 
@@ -555,7 +561,12 @@ print(1 == 1 or 2 == 3)
 
 ########## - not - Operador lógico NOT ##########
 print('-' * 15 + 'not' + '-' * 15)
-print(not 1 is 1)
+
+is_raining = False
+if not is_raining:
+    print("You don't need an umbrella.")
+else:
+    print("Take an umbrella with you.")
 
 
 
