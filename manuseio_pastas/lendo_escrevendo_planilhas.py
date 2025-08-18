@@ -9,7 +9,7 @@ pasta_atual = Path(__file__).parent
 # print(planilha_teste)
 
 # lendo aba específica
-planilha_teste_aba = pd.read_excel(pasta_atual / 'planilha_teste.xlsx', sheet_name='Employee ID')
+planilha_teste_aba = pd.read_excel(pasta_atual / 'planilha_teste.xlsx', sheet_name='Planilha1')
 print(planilha_teste_aba)
 
 # lendo várias abas
