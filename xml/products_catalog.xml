@@ -1,0 +1,70 @@
+<product_catalog>
+  <product id="P001">
+    <name>Laptop</name>
+    <category>Electronics</category>
+    <price currency="USD">1200.00</price>
+    <availability>in_stock</availability>
+    <description>A high-performance laptop for professionals and students.</description>
+    <specs>
+      <screen_size>15.6 inch</screen_size>
+      <processor>Intel Core i7</processor>
+      <ram>16GB</ram>
+    </specs>
+  </product>
+  <product id="P002">
+    <name>Mechanical Keyboard</name>
+    <category>Accessories</category>
+    <price currency="USD">110.00</price>
+    <availability>in_stock</availability>
+    <description>A durable mechanical keyboard with customizable RGB lighting.</description>
+    <specs>
+      <color>Black</color>
+      <layout>US QWERTY</layout>
+    </specs>
+  </product>
+  <product id="P003">
+    <name>Wireless Mouse</name>
+    <category>Accessories</category>
+    <price currency="USD">55.00</price>
+    <availability>out_of_stock</availability>
+    <description>Ergonomic wireless mouse with adjustable DPI settings.</description>
+    <specs>
+      <connection_type>Bluetooth</connection_type>
+      <battery_life>6 months</battery_life>
+    </specs>
+  </product>
+  <product id="P004">
+    <name>Smartphone</name>
+    <category>Electronics</category>
+    <price currency="USD">850.00</price>
+    <availability>in_stock</availability>
+    <description>The latest flagship smartphone with a stunning camera.</description>
+    <specs>
+      <os>Android 14</os>
+      <storage>256GB</storage>
+      <display>6.7 inch AMOLED</display>
+    </specs>
+  </product>
+  <product id="P005">
+    <name>Coffee Machine</name>
+    <category>Home &amp; Kitchen</category>
+    <price currency="USD">250.00</price>
+    <availability>in_stock</availability>
+    <description>Programmable coffee machine with a built-in grinder.</description>
+    <specs>
+      <capacity>12 cups</capacity>
+      <color>Silver</color>
+    </specs>
+  </product>
+  <product id="P006">
+    <name>Running Shoes</name>
+    <category>Apparel</category>
+    <price currency="USD">150.00</price>
+    <availability>in_stock</availability>
+    <description>Lightweight and comfortable running shoes for all-day wear.</description>
+    <specs>
+      <size>10 US</size>
+      <material>Breathable mesh</material>
+    </specs>
+  </product>
+</product_catalog>
