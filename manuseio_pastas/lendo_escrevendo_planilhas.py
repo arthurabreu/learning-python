@@ -17,3 +17,11 @@ planilhas = pd.read_excel(pasta_atual / 'planilha_teste.xlsx', sheet_name=None, 
 for nome_aba, df in planilhas.items():
     print(f"Aba: {nome_aba}")
     print(df)
+
+# lendo colunas específicas e exibindo todas as informações
+planilha_teste_aba = pd.read_excel(pasta_atual / 'planilha_teste.xlsx', sheet_name='Planilha1', usecols=['Employee ID'])
+print(planilha_teste_aba)
+
+# lendo colunas especificas e exibindo as 5 primeiras
+planilha_teste_aba = pd.read_excel(pasta_atual / 'planilha_teste.xlsx', sheet_name='Planilha1', usecols=['Employee ID'])
+print(planilha_teste_aba.head(5))
