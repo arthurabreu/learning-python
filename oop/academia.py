@@ -1,4 +1,6 @@
 import random
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 class Academia:
     def __init__(self):
@@ -95,6 +97,10 @@ if __name__ == "__main__":
     usuarios += [Usuario(tipo=2, academia=academia) for _ in range(1)]
     random.shuffle(usuarios)
 
+list_chaos = []
+
+for k in range(50):
+    academia.reiniciar_o_dia()
     for i in range(10):
         print(f"\n--- Rodada {i+1} ---")
         # Rack1: Estado inicial
@@ -111,3 +117,53 @@ if __name__ == "__main__":
             user.finalizar_treino()
         print(f"Rack4 - Após todos finalizarem treino: {academia.rack_lista()}")
         print(f"Caos: {academia.calcular_caos():.0%}")
+        list_chaos.append(academia.calcular_caos())
+    # list_chaos.append(academia.calcular_caos())
+
+sns.histplot(list_chaos, bins=20, color="skyblue")  # You can change bins and color
+plt.xlabel("Caos (%)")           # Label for the x-axis
+plt.ylabel("Frequência")         # Label for the y-axis
+plt.title("Distribuição do Caos nas Simulações")  # Title for the plot
+plt.tight_layout()               # Adjusts layout to fit everything
+plt.show()
+
+# Plot customization cheat-sheet (paste above your sns/plt calls)
+# ---------------------------
+# sns.histplot(list_chaos, bins=20, color="skyblue", edgecolor="white", alpha=0.9)
+# plt.xlabel("Caos (%)", fontsize=12, color="black", labelpad=8, loc="center")
+# plt.ylabel("Frequência", fontsize=12, color="black", labelpad=8)
+# plt.title("Distribuição do Caos nas Simulações", fontsize=14, fontweight="bold", pad=12)
+# plt.xlim(0, 1)                # limitar eixo x (ex: 0.0..1.0 se caos em fração)
+# plt.ylim(0, None)             # limitar eixo y (None = automático)
+# plt.grid(axis="y", alpha=0.25, linestyle="--")  # grades leves somente no eixo y
+# plt.tight_layout()            # evita corte de labels/título
+# plt.show()
+#
+# Notes:
+# - color="..."         : muda cor das barras (ex: "skyblue", "#4c72b0")
+# - bins=...            : número de bins/colunas do histograma
+# - fontsize, color     : ajustam estilo do texto dos rótulos
+# - labelpad, pad       : adicionam espaço entre rótulo/título e o eixo
+# - loc for xlabel      : "left" | "center" | "right" (posicionamento do rótulo)
+# - edgecolor, alpha    : ajuste fino da aparência das barras
+# ---------------------------
+# filepath: c:\Users\arthur\Documents\python\learning-python\oop\academia.py
+# Plot customization cheat-sheet (paste above your sns/plt calls)
+# ---------------------------
+# sns.histplot(list_chaos, bins=20, color="skyblue", edgecolor="white", alpha=0.9)
+# plt.xlabel("Caos (%)", fontsize=12, color="black", labelpad=8, loc="center")
+# plt.ylabel("Frequência", fontsize=12, color="black", labelpad=8)
+# plt.title("Distribuição do Caos nas Simulações", fontsize=14, fontweight="bold", pad=12)
+# plt.xlim(0, 1)                # limitar eixo x (ex: 0.0..1.0 se caos em fração)
+# plt.ylim(0, None)             # limitar eixo y (None = automático)
+# plt.grid(axis="y", alpha=0.25, linestyle="--")  # grades leves somente no eixo y
+# plt.tight_layout()            # evita corte de labels/título
+# plt.show()
+#
+# Notes:
+# - color="..."         : muda cor das barras (ex: "skyblue", "#4c72b0")
+# - bins=...            : número de bins/colunas do histograma
+# - fontsize, color     : ajustam estilo do texto dos rótulos
+# - labelpad, pad       : adicionam espaço entre rótulo/título e o eixo
+# - loc for xlabel      : "left" | "center" | "right" (posicionamento do rótulo)
+# - edgecolor, alpha    : ajuste fino da aparência das
